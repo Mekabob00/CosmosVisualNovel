@@ -26,14 +26,14 @@
 [button name="role_button" role="menu" graphic="window/menu.png" enterimg="window/menu_on.png" x="1313" y="1033" width="55" height="30" height="30" hint="タイトル画面に戻ります。" storage="menu.ks" ]
 
 ;文字が表示される領域を調整
-[position layer=message0 page=fore margint="100" marginl="300" marginr="70" marginb="60"]
+[position layer=message0 page=fore margint="100" marginl="350" marginr="70" marginb="60"]
 
 ;メッセージウィンドウの表示
 @layopt layer=message0 visible=true
 
 
 ;キャラクターの名前が表示される文字領域
-[ptext name="chara_name_area" layer="message0" color="white" size=40 bold=true x=320 y=820 shadow="0x000000"]
+[ptext name="chara_name_area" layer="message0" color="white" size=40 bold=true x=370 y=820 shadow="0x000000"]
 
 ;上記で定義した領域がキャラクターの名前表示であることを宣言（これがないと#の部分でエラーになります）
 [chara_config ptext="chara_name_area"]
@@ -70,36 +70,38 @@
 [chara_show  name="maki" face="angry_little" width=1000 height=1000 ]
 [chara_show  layer="message0" name="maki_face" face="angry_little" zindex=1005 width=270 height=270 depth=front left=40 top=810]
 
+[playbgm storage="daru.ogg"]
+
 #???
-[font size=40 shadow="0x000000"]
-[chara_mod name="maki" face="angry_little" ]
+[font size=40 shadow="0x000000" face="MinN"]
+[chara_mod name="maki" face="angry_little" time=0]
 [chara_mod name="maki_face" face="angry_little" time=0 ]
 #???
 「......あげる」[p]
 #???
-「.........だから...付き合ってあげるって言ってんの!!」[p]
-#
-俺は今、人生最大の危機が迫っている[p]
+「.........だから...付き合ってあげるって言ってんの！！」[p]
 
 [chara_hide layer="message0" name="maki_face" time=0 ]
+#
+俺は今、人生最大の危機が迫っている[p]
 #直哉
 「言ってる意味がわからないんだけど」[p]
 
-[chara_show  layer="message0" name="maki_face" zindex=1005 width=270 height=270 depth=front left=40 top=810]
-[chara_mod name="maki" face="angry_big" ]
+[chara_show  layer="message0" name="maki_face" zindex=1005 width=270 height=270 depth=front left=40 top=810 time=0]
+[chara_mod name="maki" face="angry_big" time=0 ]
 [chara_mod name="maki_face" face="angry_big" time=0 ]
 #???
-「はぁ!？日本語分かんないの？[r]つ・き・あ・っ・て・あ・げ・る[r]っていってんの!」[p]
+「はぁ！？日本語分かんないの？[r]　つ・き・あ・っ・て・あ・げ・る[r]　っていってんの！」[p]
 
 [chara_hide layer="message0" name="maki_face" time=0 ]
 #直哉
-「日本語は分かるわ。なんで俺は幼馴染であるお前に[r]いきなり告白されなきゃならないんだ」[p]
+「日本語は分かるわ。なんで俺は幼馴染であるお前に[r]　いきなり告白されなきゃならないんだ」[p]
 
-[chara_show  layer="message0" name="maki_face" zindex=1005 width=270 height=270 depth=front left=40 top=810]
-[chara_mod name="maki" face="angry_close" ]
+[chara_show  layer="message0" name="maki_face" zindex=1005 width=270 height=270 depth=front left=40 top=810 time=0]
+[chara_mod name="maki" face="angry_close" time=0]
 [chara_mod name="maki_face" face="angry_close" time=0 ]
 #真希
-「..........[r]直哉さ、あんときの約束、覚えてないの？」[p]
+「..........[r]　直哉さ、あんときの約束、覚えてないの？」[p]
 
 [chara_hide layer="message0" name="maki_face" time=0 ]
 #
@@ -123,7 +125,7 @@
 「やめろー！」[p]
 [quake  time="300"  ]
 #
-バシッ!![p]
+バシッ！！[p]
 #真希
 「直...くん？」[p]
 #ガキ大将
@@ -133,9 +135,9 @@
 #
 あの後、俺は日が暮れ始めるまで取っ組み合いの喧嘩をしていた [p]
 #真希
-「うぅ...ありがとう、直君...ぐすん[r]でもぼうりょくはだめだよ？」[p]
+「うぅ...ありがとう、直君...ぐすん[r]　でもぼうりょくはだめだよ？」[p]
 #直哉
-「うるせぇなー。取り返してやったんだからいいだろ？[r]ほら、泣くのやめろよ」[p]
+「うるせぇなー。取り返してやったんだからいいだろ？[r]　ほら、泣くのやめろよ」[p]
 #真希
 「うぅ～ん....でも、うぅ、やっぱりぼうりょくは反対」[p]
 #直哉
@@ -152,9 +154,9 @@
 #
 昔の俺は所謂『ヒーロー』ってのに強く憧れていて、[r]いろんな喧嘩に首を突っ込んでは取っ組み合いの日々を過ごしていた。[p]
 #直哉
-「もっと強くなれよ[r]あんな奴らに負けてちゃヒーローになれないぞ」[p]
+「もっと強くなれよ[r]　あんな奴らに負けてちゃヒーローになれないぞ」[p]
 #真希
-「なろうとしてないよ！？[r]直くんはいつも変な冗談ばっかり言うんだから、もぅ」[p]
+「なろうとしてないよ！？[r]　直くんはいつも変な冗談ばっかり言うんだから、もぅ」[p]
 #直哉
 「変って.....お前もそんなこと言うのかよ！！」[p]
 #真希
@@ -176,15 +178,15 @@
 #真希
 「......え？」[p]
 #真希
-「どういうこと？明日引っ越すって急に......[r]また、変な冗談だよね？」[p]
+「どういうこと？明日引っ越すって急に......[r]　また、変な冗談だよね？」[p]
 #直哉
-「冗談じゃんないんだ。結構前から父さんの転勤が決まってさ[r]」[p]
+「冗談じゃんないんだ。結構前から父さんの転勤が決まってさ[r]　」[p]
 #真希
 「結構前って......どうしてもっと早く教えてくれなかったの？」[p]
 #直哉
 「お前が泣くと思って.....」[p]
 #真希
-「私が泣くからいけないの？[r]私が泣くからいつも喧嘩してるの？」[p]
+「私が泣くからいけないの？[r]　私が泣くからいつも喧嘩してるの？」[p]
 #直哉
 「まぁ......そーゆうときもある.......かも」[p]
 #真希
@@ -200,7 +202,7 @@
 #真希
 「......してほしい」[p]
 #真希
-「お嫁さん...にして.....くれないかな...なんて、えへへ[r]いきなり言われても困るよね」[p]
+「お嫁さん...にして.....くれないかな...なんて、えへへ[r]　いきなり言われても困るよね」[p]
 #直哉
 「へ？いいよ......？」[p]
 #真希
@@ -239,7 +241,7 @@
 #直哉
 「昔の話はやめてくれ、あれは思い出したくない黒歴史なんだ」[p]
 #真希
-「ふーん。まぁ、それならいいんだけど[r]で？返事は？」[p]
+「ふーん。まぁ、それならいいんだけど[r]　で？返事は？」[p]
 #
 そうだ、今日は人生最大の危機だった。[p]
 #真希
@@ -259,26 +261,25 @@
 #直哉
 「よろしくお願いします」[p]
 #真希
-「そ、ありがとう。それじゃ、明日からよろしくね[r]私、こっちだから」[p]
+「そ、ありがとう。それじゃ、明日からよろしくね[r]　私、こっちだから」[p]
 #
 真希はそういってＴ字路を右折する[r]
 #
 少し離れてから、こっちを見てくる[p]
-[chara_mod name="maki" face="smile_scare" ]
+[chara_mod name="maki" face="smile_scare" time=0]
 [chara_mod name="maki_face" face="smile_scare" time=0 ]
 #真希
 「あ、振ったら〇すから」[p]
 #
 満面の笑みでそう言い放ち、その場を去っていった。[p]
 [chara_hide_all time=1000 wait=true]
-
-[chara_hide layer="message0" name="maki_face" time=0 ]
 #
 どうやら俺の感覚神経は正常に動作しているようだ。[p]
 #
 自身の体の正常さに感謝しつつ[r]
 #
 俺は何かの作品の主人公かなんなのか？と思う入学式初日だった。[p]
+
 
 
 #???
